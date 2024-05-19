@@ -1,0 +1,154 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Open Sans", sans-serif;
+    color: rgb(35, 31, 31);
+}
+
+a {
+    text-decoration: none;
+    color: rgb(35, 31, 31);
+}
+
+/* Error page */
+#error {
+    margin-top: 50px;
+    font-size: 40px;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#error > img {
+    height: 200px;
+}
+
+/* Blog page CSS */
+nav {
+    font-size: 25px;
+    padding: 25px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border: solid rgb(197, 40, 40);
+    border-width: 0 0 5px 0;
+    align-items: center;
+
+}
+
+#nav-btns {
+    width: 350px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.blogs {
+    margin: 25px;
+}
+
+.cont {
+    width: 600px;
+    padding: 15px 0 15px 0;
+}
+
+.blog-cont {
+    padding: 5px 0 5px 25px;
+}
+
+/* Create page CSS */
+
+#create {
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#form > label {
+    padding: 20px;
+}
+
+#form > input, textarea {
+    height: 25px;
+    width: 650px;
+    border: solid rgba(238, 99, 99, 0.86) 2px;
+    border-radius: 7px;
+    padding: 5px;
+}
+
+#form > textarea {
+    height: 100px;
+}
+
+.div-btn {
+    margin-top: 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.btn {
+    height: 30px;
+    width: 70px; 
+    background-color: rgba(206, 74, 74, 0.86);
+    border: none;
+    border-radius: 5px;
+    color: rgb(255, 255, 255);
+    font-size: 15px;
+}
+
+.btn:hover {
+    cursor: pointer;
+    background-color: rgba(173, 49, 49, 0.86);
+}
+
+#about-us {
+    /* background-color: yellow; */
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 20px;
+    text-align: center;
+    line-height: 40px;
+}
+#about-us img{
+    height: 40px;
+    margin: 20px 10px;
+    border-radius: 10px;
+}
+
+#tech-list {
+    line-height: 30px;
+    text-align: start;
+    padding-bottom: 30px;
+}
+
+/* Individual blog page */
+#single-blog {
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#single-blog-cont {
+    /* background-color: yellow; */
+    padding: 15px 0 15px 0;
+    width: 600px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#single-blog-btn {
+    width: 600px;
+    padding: 0 25px 0 25px;
+    display: flex;
+    flex-direction: row;
+}   
+
+/* Update page */
+

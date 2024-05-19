@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('../partials/head.ejs') %>
+<body>
+    <%- include('../partials/nav.ejs') %>
+    <div id="single-blog">
+        <!-- <h1>Blogs</h1> -->
+        <div id="single-blog-cont">
+            <h2 class="blog-cont"><%= blog.title %></h2>
+            <h3 class="blog-cont"><%= blog.snippet %></h3>
+            <p class="blog-cont"><%= blog.passage %></p>
+        </div>
+        <div id="single-blog-btn" class="div-btn">
+            <button id="upd-btn" class="btn">Update</button>
+            <button id="del-btn" class="btn">Delete</button>
+        </div>
+    </div>
+    
+    <script>
+        const delBtn = document.querySelector('#del-btn');
+        delBtn.addEventListener('click', () => {
+            const delURL = '/blogs/<%= blog._id %>';
+            console.log(delURL);
+            fetch(delURL, {method: 'DELETE'})
+            .then((response) => {
+                return response.json();
+            })
+            .then((data) => {
+                window.location.href = data.redirect;
+            })
+            .catch((err) => {
+                console.log(err);
+            })
+        })
+
+        const updBtn = document.querySelector('#upd-btn');
+        updBtn.addEventListener('click', (e) => {
+            const updURL = '/blogs/update/<%= blog.id %>';
+            console.log(updURL)
+            window.location.href = updURL;
+        })
+    </script>
+</body>
+</html>
